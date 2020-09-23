@@ -11,20 +11,23 @@ SeqScan-D takes inspiration from SeqScan, but while the latter is tailored to sp
 For details please refer to: M. L. Damiani, F. Hachem, C. Quadri, M. Rossini, and S. Gaito.  On location relevance and diversity in human mobility data. ACM TSAS, In press.
 
 How to use the software:
+
 It is sufficient to call the "seqscanD-scanner.py" from a command prompt. you will be asked to enter:
-- The path for the input file, it has to be a csv file. This file requires at least two fields: "timestamp" and "site_name". The detailed desctiption will be explained below.
+- The path for the input file, it has to be a csv file. This file requires at least two fields: "timestamp" and "location_name". Its detailed desctiption will be explained below.
 - The path for the output file, it has to be a csv file too.
 - The "N" parameter: it is an integer value.
 - The "delta" parameter: it is a decimal value, in DAYS.
 
 Structure of the input file:
+
 The input file has to be in a CSV format. It refers to a single trajectory. It should include at least the two columns: "timestamp" and "location_name". The file has to have columns names as headers.
-- The "timesptamp"column: contains the date and time of the corresponding point, by default it has to be in the format of: "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
+- The "timesptamp" column: contains the date and time of the corresponding point, by default it has to be in the format of: "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
 - The "location_name" column: contains the names or labels of the locations. You may change the required column name from the configuration file as well.
 
 An example of the input file exists in: Data_examples/input.csv
 
 Structure of the output file:
+
 It is a CSV file composed of 6 fields:
 - location_name
 - start_time: the start time of the cluster (corresponding attractive location).
