@@ -19,7 +19,7 @@ It is sufficient to call the "seqscanD-scanner.py" from a command prompt. you wi
 
 Structure of the input file:
 The input file has to be in a CSV format. It refers to a single trajectory. It should include at least the two columns: "timestamp" and "location_name". The file has to have columns names as headers.
--The "timesptamp"column: contains the date and time of the corresponding point, by default it has to be in the format of: "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
+- The "timesptamp"column: contains the date and time of the corresponding point, by default it has to be in the format of: "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
 - The "location_name" column: contains the names or labels of the locations. You may change the required column name from the configuration file as well.
 
 An example of the input file exists in: Data_examples/input.csv
