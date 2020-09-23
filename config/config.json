@@ -1,0 +1,18 @@
+{
+    "input_file_structure":{
+        "time_field":"timestamp",
+		"pzone_field":"location_name",
+        "time_field_format":"%Y-%m-%d %H:%M:%S"
+    },
+    "output_file_structure":{
+        "pzone_field":"location_name",
+        "start_time":"start_time",
+        "end_time":"end_time",
+        "presence":"presence",
+        "duration":"duration",
+        "q_index":"q_index",
+
+		"output_time_field_format":"%Y-%m-%d %H:%M:%S"
+
+    }
+}
