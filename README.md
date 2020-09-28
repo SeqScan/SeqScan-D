@@ -21,8 +21,8 @@ It is sufficient to call the "seqscanD-scanner.py" from a command prompt. you wi
 
 Structure of the input file:
 
-The input file has to be in a CSV format. It refers to a single trajectory. It should include at least the two columns: "timestamp" and "location_name". The file has to have columns names as headers.
-- The "timesptamp" column: contains the date and time of the corresponding point, by default it has to be in the format of: "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
+The input file has to be in a CSV format. It refers to a single trajectory. It should include at least the two columns: "timestamp" and "location_name". The file shall have columns names as headers.
+- The "timestamp" column: contains the timestamp of the corresponding point, by default the format is: "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
 - The "location_name" column: contains the names or labels of the locations. You may change the required column name from the configuration file as well.
 
 An example of the input file exists in: Data_examples/input.csv
@@ -35,7 +35,7 @@ It is a CSV file composed of 6 fields:
 - end_time: the end time of the cluster.
 - presence: The effective time spent inside the cluster (excluding the absences), in DAYS
 - duration: The total time spent inside the cluster, in DAYS
-- q_index: The stationnarity index, a decimal value between 0 and 1 that helps evaluating the quality of the clusters. For more information about this metric, please refer to: Damiani, M. L., Issa, H., Fotino, G., Heurich, M., & Cagnacci, F. (2016). Introducing ‘presence’and ‘stationarity index’to study partial migration patterns: an application of a spatio-temporal clustering technique. International Journal of Geographical Information Science, 30(5), 907-928.
+- q_index: The stationarity index, is a clustering internal quality indicator, it takes a value between 0 and 1. For more information about this metric, please refer to: Damiani, M. L., Issa, H., Fotino, G., Heurich, M., & Cagnacci, F. (2016). Introducing ‘presence’and ‘stationarity index’to study partial migration patterns: an application of a spatio-temporal clustering technique. International Journal of Geographical Information Science, 30(5), 907-928.
 
 The fields names and the date format of the start_time and end_time values can be modified from the configuration file.
 
