@@ -1,5 +1,5 @@
 # Discrete-SeqScan-clustering
-SeqScan-D: cluster-based technique for the segmentation of symbolic trajectories. 
+SeqScan-D: cluster-based technique for the segmentation of symbolic trajectories. (The symbolic trajectory is seen as a sequence of pairs consisting of a time instant and a label indicating the location). 
 
 The goal is to extract from a symbolic trajectory a series of temporally annotated locations, qualified as attractive.
 A location is attractive when the user spends inside of it at least some amount of time, with possibility of some occasional absences.
