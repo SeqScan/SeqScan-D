@@ -8,6 +8,7 @@ The algorithm requires 2 parameters:
 - N (minimum number of points occured inside the location)
 
 SeqScan-D takes inspiration from SeqScan, but while the latter is tailored to spatial trajectories, SeqScan-D is to be applied on symbolic trajectories (like Call Details Records CDR).
+
 For details please refer to: M. L. Damiani, F. Hachem, C. Quadri, M. Rossini, and S. Gaito.  On location relevance and diversity in human mobility data. ACM TSAS, In press.
 
 How to use the software:
