@@ -4,12 +4,12 @@ SeqScan-D: cluster-based technique for the segmentation of symbolic trajectories
 The goal is to extract from a symbolic trajectory a series of temporally annotated locations, qualified as attractive.
 A location is attractive when the user spends inside of it at least some amount of time, with possibility of some occasional absences.
 The algorithm requires 2 parameters:
-- delta (minimum amount of time effiectively spent inside the location, i.e without the absences) and 
-- N (minimum number of points occured inside the location)
+- delta (minimum required presence inside the attractive location, for more information about the presence please refer to [2]) and 
+- N (minimum number of points that occured inside the location)
 
 SeqScan-D takes inspiration from SeqScan, but while the latter is tailored to spatial trajectories, SeqScan-D is to be applied on symbolic trajectories (like Call Details Records CDR).
 
-For details please refer to: M. L. Damiani, F. Hachem, C. Quadri, M. Rossini, and S. Gaito.  On location relevance and diversity in human mobility data. ACM TSAS, In press.
+For details please refer to [1]
 
 How to use the software:
 
@@ -35,12 +35,14 @@ It is a CSV file composed of 6 fields:
 - end_time: the end time of the cluster.
 - presence: The effective time spent inside the cluster (excluding the absences), in DAYS
 - duration: The total time spent inside the cluster, in DAYS
-- q_index: The stationarity index, is a clustering internal quality indicator, it takes a value between 0 and 1. For more information about this metric, please refer to: Damiani, M. L., Issa, H., Fotino, G., Heurich, M., & Cagnacci, F. (2016). Introducing ‘presence’and ‘stationarity index’to study partial migration patterns: an application of a spatio-temporal clustering technique. International Journal of Geographical Information Science, 30(5), 907-928.
+- q_index: The stationarity index, is a clustering internal quality indicator, it takes a value between 0 and 1. For more information about this metric, please refer to [2] 
 
 The fields names and the date format of the start_time and end_time values can be modified from the configuration file.
 
 An example of the output file exists in: Data_examples/output.csv
 The parameters used to obtain this output from the above input are: N= 4 points, delta= 0.0111 days (~15 mins)
 
-
+---------------------------------------------
+[1]:  Damiani M.L. , Hachem F., Quadri C., Rossini M., and Gaito S. "On location relevance and diversity in human mobility data". ACM TSAS, In press
+[2]: Damiani M. L., Issa H., Fotino G., Heurich M., & Cagnacci F. (2016). "Introducing ‘presence’and ‘stationarity index’to study partial migration patterns: an application of a spatio-temporal clustering technique". International Journal of Geographical Information Science, 30(5), 907-928.
 
