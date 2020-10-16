@@ -24,7 +24,7 @@ The input file specifies a single trajectory. A trajectory is a sequence of "tim
 - "timestamp" : by default the format is "%Y-%m-%d %H:%M:%S". You may change the column name and the date format from the configuration file in: config/config.json
 - "location_name": a string. You may change the required column name from the configuration file as well.
 
-An example of the input file exists in: Data_examples/input.csv
+An example of input file  can be found in: Data_examples/input.csv
 
 OUTPUT FILE:
 
