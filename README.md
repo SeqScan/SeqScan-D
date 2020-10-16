@@ -1,23 +1,22 @@
-# Discrete-SeqScan-clustering
-SeqScan-D: cluster-based technique for the segmentation of symbolic trajectories. (The symbolic trajectory is seen as a sequence of pairs consisting of a time instant and a label indicating the location). 
+# SeqScan-D
 
-The goal is to extract from a symbolic trajectory a series of temporally annotated locations, qualified as attractive.
-A location is attractive when the user spends inside of it at least some amount of time, with possibility of some occasional absences.
-The algorithm requires 2 parameters:
-- delta (minimum required presence inside the attractive location, for more information about the presence please refer to [2]) and 
-- N (minimum number of points that occured inside the location)
+SeqScan-D is a novel algorithm for the summarization of sequences of temporally annotated symbolic locations, i.e. symbolic trajectories. A major example of symbolic trajectories are the sequences of Call Detail Records (CDR). SeqScan-D splits a trajectory in segments and replaces every segment with the symbolic location that is most representative in the period, based on density and temporal criteria. Unlike compression methods for symbolic sequences, for example based on RLE, SeqScan-D aims to preserve the significance of locations in time.  SeqScan-D is conceptually built on the SeqScan framework for the summarization of spatial trajectories.
 
-SeqScan-D takes inspiration from SeqScan, but while the latter is tailored to spatial trajectories, SeqScan-D is to be applied on symbolic trajectories (like Call Details Records CDR).
+# Citation
+This algorithm is presented in the article:
 
-For details please refer to [1]
+Maria Luisa Damiani, Fatima Hachem, Christian Quadri, Matteo Rossini, and Sabrina Gaito (2020). On Location Relevance and Diversity in Human Mobility Data. ACM Transactions on Spatial Algorithms and Systems 7, 2, Article 7 (October 25, 2020), 38 pages. https://doi.org/10.1145/3423404"
+
+
+# Code 
 
 How to use the software:
 
 It is sufficient to call the "seqscanD-scanner.py" from a command prompt. you will be asked to enter:
 - The path for the input file, it has to be a csv file. This file requires at least two fields: "timestamp" and "location_name". Its detailed desctiption will be explained below.
 - The path for the output file, it has to be a csv file too.
-- The "N" parameter: it is an integer value.
-- The "delta" parameter: it is a decimal value, in DAYS.
+- The "N" parameter: the threshold for the algorithm's density criteria. It is an integer value.
+- The "delta" parameter: the threshold for the algorithm's temporal criteria. It is a decimal value, in DAYS.
 
 Structure of the input file:
 
@@ -42,7 +41,5 @@ The fields names and the date format of the start_time and end_time values can b
 An example of the output file exists in: Data_examples/output.csv
 The parameters used to obtain this output from the above input are: N= 4 points, delta= 0.0111 days (~15 mins)
 
----------------------------------------------
-[1]:  Damiani M.L. , Hachem F., Quadri C., Rossini M., and Gaito S. "On location relevance and diversity in human mobility data". ACM TSAS, In press
-[2]: Damiani M. L., Issa H., Fotino G., Heurich M., & Cagnacci F. (2016). "Introducing ‘presence’and ‘stationarity index’to study partial migration patterns: an application of a spatio-temporal clustering technique". International Journal of Geographical Information Science, 30(5), 907-928.
+
 
